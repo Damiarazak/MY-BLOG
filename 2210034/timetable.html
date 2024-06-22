@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+        nav {
+            background-color: rgb(93, 91, 91);
+            padding: 10px;
+            text-align: center;
+        }
+
+        
+        nav a {
+            color: #fff;
+            margin: 10px;
+            font-family: 'Trebuchet MS';
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: #530c40;
+        }
+        .sem {
+            background-color: #f0f0f0; /* Light grey background */
+            padding: 20px;
+            width: auto; /* Adjust the width as needed, or use 'auto' to fit content */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a shadow for depth */
+            margin: 0 auto; /* Centers the navigation menu horizontally */
+            text-align: center; /* Centers the links within the nav if there's extra space */
+        }
+
+        .sem a {
+            display: inline-block; /* Allows links to sit side-by-side */
+            padding: 10px;
+            margin: 5px; /* Adjusts spacing around each link */
+            background-color: #ffffff; /* White background for each link */
+            color: #000000; /* Black text color */
+            text-decoration: none; /* Removes the underline from links */
+            border-radius: 5px; /* Optional: rounds the corners of the link boxes */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Optional: adds a slight shadow to each link for depth */
+        }
+
+        .sem a:hover {
+            background-color: #e9e9e9; /* Changes background on hover for a visual effect */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #444;
+            font-weight: bold;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffe4e1;
+            margin-bottom: 20px;
+        }
+        
+        .timetable-container {
+            display: none;
+        }
+        
+        .timetable-container.active {
+            display: block;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        th,
+        td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #ffcccb;
+        }
+        
+        td:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="sem">
+        <a href="#" onclick="showTimetable('sem1')">Semester 1, 2024/2025</a>
+        <a href="#" onclick="showTimetable('sem2')">Semester 2, 2023/2024</a>
+        <a href="#" onclick="showTimetable('sem3')">Semester 1, 2023/2024</a>
+        <a href="#" onclick="showTimetable('sem4')">Semester 2, 2022/2023</a>
+    </nav>
+    <h1>Timetable Selection</h1>
+
+    <!-- Timetable Containers -->
+    <div class="timetable-container" id="sem1">
+        <h2>Semester 1, 2024/2025</h2>
+        <table>
+            <tr>
+                <th>TIME</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+            </tr>
+            <tr>
+                <td>8:30 - 9:50</td>
+                <td>CSCI 2302 DIGITAL SYSTEMS FUNDAMENTAL</td>
+                <td></td>
+                <td>CSCI 2302 DIGITAL SYSTEMS FUNDAMENTAL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:20</td>
+                <td>CSCI 2303 PRINCIPLES OF IT SECURITY</td>
+                <td>INFO 3307 HUMAN COMPUTER INTERACTION</td>
+                <td>CSCI 2303 PRINCIPLES OF IT SECURITY</td>
+                <td>INFO 3307 HUMAN COMPUTER INTERACTION</td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:50</td>
+                <td>CSCI 2304 INTELLIGENT SYSTEMS</td>
+                <td>CSCI 3300 OPERATING SYSTEMS</td>
+                <td>CSCI 2304 INTELLIGENT SYSTEMS</td>
+                <td>CSCI 3300 OPERATING SYSTEMS</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:20</td>
+                <td>LMBD 2204 BAHASA MELAYU KERJAYA (SAINS DAN TEKNOLOGI)</td>
+                <td></td>
+                <td>LMBD 2204 BAHASA MELAYU KERJAYA (SAINS DAN TEKNOLOGI)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20:00 - 22:00</td>
+                <td></td>
+                <td>CCFA 3071 FIRST AID SKILLS 1</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timetable-container" id="sem2">
+        <h2>Semester 2, 2023/2024</h2>
+        <table>
+            <tr>
+                <th>TIME</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+            </tr>
+            <tr>
+                <td>8:30 - 9:50</td>
+                <td></td>
+                <td>CSCI 2300 DATA STRUCTURES AND ALGORITHMS I</td>
+                <td></td>
+                <td>CSCI 2300 DATA STRUCTURES AND ALGORITHMS I</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:20</td>
+                <td>INFO 2304 SYSTEM ANALYSIS AND DESIGN</td>
+                <td>INFO 2302 WEB TECHNOLOGIES</td>
+                <td>INFO 2304 SYSTEM ANALYSIS AND DESIGN</td>
+                <td>INFO 2302 WEB TECHNOLOGIES</td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:50</td>
+                <td>CSCI 2305 MATH FOR COMPUTING II</td>
+                <td>TQTD 2002 TILAWAH AL-QURAN II</td>
+                <td>CSCI 2305 MATH FOR COMPUTING II</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:20</td>
+                <td>CSCI 2301 COMPUTER NETWORKING</td>
+                <td>UNGS 2380 ETHICS AND FIQH OF CONTEMPORARY ISSUES</td>
+                <td>CSCI 2301 COMPUTER NETWORKING</td>
+                <td>UNGS 2380 ETHICS AND FIQH OF CONTEMPORARY ISSUES</td>
+            </tr>
+            <tr>
+                <td>20:00 - 22:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>CCLM 2020 LEADERSHIP AND MANAGEMENT</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timetable-container" id="sem3">
+        <h2>Semester 1, 2023/2024</h2>
+        <table>
+            <tr>
+                <th>TIME</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+            </tr>
+            <tr>
+                <td>8:30 - 9:50</td>
+                <td>CSCI 1304 PROBABILITY AND STATISTICS</td>
+                <td></td>
+                <td>CSCI 1304 PROBABILITY AND STATISTICS</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:20</td>
+                <td>CSCI 1301 OBJECT ORIENTED PROGRAMMING</td>
+                <td>CSCI 1302 INTRODUCTION TO COMPUTER ORGANIZATION</td>
+                <td>CSCI 1301 OBJECT ORIENTED PROGRAMMING</td>
+                <td>CSCI 1302 INTRODUCTION TO COMPUTER ORGANIZATION</td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:50</td>
+                <td></td>
+                <td></td>
+                <td>TQTD 1002 TILAWAH AL-QURAN I</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:20</td>
+                <td>UNGS 2290 KNOWLEDGE & CIVILIZATION IN ISLAM</td>
+                <td>LEED 1301 ENGLISH FOR ACADEMIC WRITING</td>
+                <td>UNGS 2290 KNOWLEDGE & CIVILIZATION IN ISLAM</td>
+                <td>LEED 1301 ENGLISH FOR ACADEMIC WRITING</td>
+            </tr>
+            <tr>
+                <td>16:00 - 18:00</td>
+                <td></td>
+                <td></td>
+                <td>SCSH 1201 SUSTAINABLE DEVELOPMENT: ISSUES, PRINCIPLES AND PRACTICES</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timetable-container" id="sem4">
+        <h2>Semester 2, 2022/2023</h2>
+        <table>
+            <tr>
+                <th>TIME</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+            </tr>
+            <tr>
+                <td>8:30 - 9:50</td>
+                <td>CSCI 1303 MATHEMATICS FOR COMPUTING I</td>
+                <td>LQAD 2003 ARABIC FOR IBADAH II</td>
+                <td>CSCI 1303 MATHEMATICS FOR COMPUTING I</td>
+                <td>LQAD 2003 ARABIC FOR IBADAH II</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:20</td>
+                <td>INFO 1303 DATABASE SYSTEMS</td>
+                <td>NFO 1302 BUSINESS FUNDAMENTALS</td>
+                <td>INFO 1303 DATABASE SYSTEMS</td>
+                <td>NFO 1302 BUSINESS FUNDAMENTALS</td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:50</td>
+                <td>CSCI 1300 ELEMENTS OF PROGRAMMING</td>
+                <td>UNGS 1301 BASIC PHILOSOPHY AND ISLAMIC WORLDVIEW</td>
+                <td>CSCI 1300 ELEMENTS OF PROGRAMMING</td>
+                <td>UNGS 1301 BASIC PHILOSOPHY AND ISLAMIC WORLDVIEW</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:20</td>
+                <td>CSCI 1305 INTRODUCTION TO SOFTWARE ENGINEERING</td>
+                <td></td>
+                <td>CSCI 1305 INTRODUCTION TO SOFTWARE ENGINEERING</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20:00 - 22:00</td>
+                <td></td>
+                <td></td>
+                <td>CCUB 1062 USRAH 2</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function showTimetable(sem) {
+            // Hide all timetable containers
+            var containers = document.querySelectorAll('.timetable-container');
+            containers.forEach(container => {
+                container.classList.remove('active');
+            });
+
+            // Show selected timetable container
+            var selectedContainer = document.getElementById(sem);
+            selectedContainer.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
+
+
+    

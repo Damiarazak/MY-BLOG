@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Food and Hobbies</title>
+    <style>
+  
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f3f3f3; 
+            margin: 0;
+            padding: 0;
+            color: #444;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #353535;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #f06292; 
+        }
+
+        /* Section Heading Styles */
+        h1 {
+            text-align: center;
+            color: #444;
+            font-weight: bold;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffe4e1;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px; 
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+
+        /* List Styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        ul li a {
+            color: #530c40; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            color: #f06292; 
+        }
+        .food-section {
+            border: 2px solid #ccc; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+        }
+
+        /* Iframe Styles */
+        iframe {
+            display: none; 
+            margin: 0 auto;
+            max-width: 100%;
+            border: none; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        }
+
+        /* Toggle Buttons Styles */
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+
+        .toggle-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer; /*  style changes the mouse cursor to a pointer (hand icon) when hovering over the element, indicating it is clickable. */
+            background-color: #f06292; 
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            
+        }
+
+        .toggle-buttons button:hover {
+            background-color: #530c40; 
+        }
+        /* Hobby Cards */
+        .hobby-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hobby-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .hobby-card ul {
+            margin-top: 10px;
+        }
+        .hobby-card img {
+            width: 400px; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Favorite Food Section -->
+    <h1>MY FAVOURITE FOOD</h1>
+        <div class="food-section">
+            <h2>SPAGHETTI</h2>
+            <ul>
+                <li><a href="https://resepichenom.com/resepi/spaghetti-aglio-olio/show">Recipe for Spaghetti Aglio Olio</a></li>
+                <li><iframe id="spaghetti-video" width="560" height="315" src="https://www.youtube.com/embed/PuL41Eb5SgU?si=2MEU0jxFzQMzG4Xq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </ul>
+                <div id="spaghetti-buttons" class="toggle-buttons">
+                <!-- Button that triggers the 'toggleContent' JavaScript function to show or hide the 'spaghetti-video' content when clicked -->
+                <button onclick="toggleContent('spaghetti-video')">Watch Video</button>
+                <!-- This code creates a button that, when clicked, will open a link to a spaghetti aglio olio recipe in a new tab. -->
+                <button><a href="https://resepichenom.com/resepi/spaghetti-aglio-olio/show" target="_blank">View Recipe</a></button>  <!-- target="_blank" is used within an <a> tag to specify that the linked URL should open in a new tab or window. -->
+            </div>
+        </div>
+        
+        <div class="food-section">
+            <h2>CREME BRULEE</h2>
+            <ul>
+                <li><a href="https://sallysbakingaddiction.com/creme-brulee/">Recipe for Creme Brulee</a></li>
+                <li><iframe id="creme-brulee-video" width="560" height="315" src="https://www.youtube.com/embed/imJKn_YbFUI?si=_8Fo_uL6OnOH1KyS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </ul>
+            <div id="creme-brulee-buttons" class="toggle-buttons">
+                <button onclick="toggleContent('creme-brulee-video')">Watch Video</button>
+                <button><a href="https://sallysbakingaddiction.com/creme-brulee/" target="_blank">View Recipe</a></button>
+            </div>
+        </div>
+    
+        <div class="food-section">
+        <h2>BURNT CHEESECAKE</h2>
+        <ul>
+            <li><a href="https://www.recipetineats.com/basque-cheesecake/">Recipe for Burnt Cheesecake</a></li>
+            <li><iframe id="burnt-cheesecake-video" width="560" height="315" src="https://www.youtube.com/embed/kQUKnGlsZfU" title="Burnt Cheesecake Recipe Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        </ul>
+        <div id="burnt-cheesecake-buttons" class="toggle-buttons">
+            <button onclick="toggleContent('burnt-cheesecake-video')">Watch Video</button>
+            <button><a href="https://www.recipetineats.com/basque-cheesecake/" target="_blank">View Recipe</a></button>
+        </div>
+         </div>
+         <div class="food-section">
+        <h2>CHOUX AU CRAQUELIN</h2>
+        <ul>
+            <li><a href="https://princessbamboo.com/how-to-make-cream-puff/#google_vignette">Recipe for Choux au Craquelin</a></li>
+            <li><iframe id="choux-au-craquelin-video" width="560" height="315" src="https://www.youtube.com/embed/Bqvnf787PJA" title="Choux au Craquelin Recipe Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        </ul>
+        <div id="choux-au-craquelin-buttons" class="toggle-buttons">
+            <button onclick="toggleContent('choux-au-craquelin-video')">Watch Video</button>
+            <button><a href="https://princessbamboo.com/how-to-make-cream-puff/#google_vignette" target="_blank">View Recipe</a></button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Hobbies Section -->
+    <h1>MY HOBBIES</h1>
+    <div class="hobby-card">
+        <h2>Watching Movies and Drama</h2>
+        <ul>
+            <img src="netf.jpg" alt="movies" />
+            <li><a href="https://www.netflix.com/" target="_blank">Netflix</a></li>
+            <img src="dramacool.png" alt="movies" />
+            <li><a href="https://vv.dramacool.sr/" target="_blank">DramaCool</a></li>
+        </ul>
+    
+    </div>
+
+    <div class="hobby-card">
+        <h2>Baking</h2>
+        <ul>
+            <img src="nino.png" alt="movies" />
+            <li><a href="https://www.youtube.com/@NinosHome" target="_blank">Check out the recipe videos</a></li>
+            <img src="chenom.png" alt="movies" />
+            <li><a href="https://www.youtube.com/@CheNom" target="_blank">Favorite Cooking & Baking YouTuber</a></li>
+        </ul>
+    </div>
+
+        <!-- JavaScript for Toggle Functionality -->
+        <script>
+            // Define a function named 'toggleContent' that takes an element ID as an argument
+            function toggleContent(id) {
+                // Use getElementById to find the element with the specified ID
+                var element = document.getElementById(id);
+                // Check if the element's display style is 'none' or empty (not set)
+                if (element.style.display === "none" || element.style.display === "") {
+                    // 'block' to make the element visible
+                    element.style.display = "block";
+                } else {
+                    // style to 'none' to hide it
+                    element.style.display = "none";
+                }
+            }
+        </script>
+</body>
+</html>
+
+

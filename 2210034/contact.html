@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: pink;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #87184e;
+        }
+        section {
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #530c40;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #530c40;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li a {
+            color: #530c40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            color: #87184e;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #530c40;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+        button {
+            background-color: #530c40;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #87184e;
+        }
+        #form-response {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        footer {
+            padding: 10px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <section id="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> damiarzk24@gmail.com</p>
+        <p><strong>Phone:</strong> 01136872328</p>
+        <h2>Connect on Social Media</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/Dmiarzak/">Instagram</a></li>
+        </ul>
+    </section>
+
+    <section id="contact-form-section">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="form-response"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Blog</p>
+    </footer>
+
+    
+    <!-- Load jQuery library from Google CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+            // Wait for the document to be fully loaded
+            $(document).ready(function() {
+                // Attach an event listener for the 'submit' event on the form with id 'contact-form'
+                $('#contact-form').on('submit', function(event) {
+                    // Prevent the default form submission behavior
+                    event.preventDefault();
+                    
+                    // Collect form data into an object
+                    const formData = {
+                        name: document.getElementById('name').value, // Get the value of the input field with id 'name'
+                        email: document.getElementById('email').value, // Get the value of the input field with id 'email'
+                        message: document.getElementById('message').value // Get the value of the textarea with id 'message'
+                    };
+
+                    // Log the form data to the console
+                    console.log('Form submitted:', formData);
+                    // Show an alert to the user
+                    alert('Thank you for your message!');
+                });
+            });
+        </script>
+
+</body>
+</html>
+
+
+

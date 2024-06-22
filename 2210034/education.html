@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Background</title>
+    
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        nav {
+            background-color: rgb(93, 91, 91);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 10px;
+            font-family: 'Trebuchet MS';
+            font-size: 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #530c40;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+            font-weight: bold;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffe4e1;
+            margin-bottom: 20px;
+        }
+        .school-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .school-list a {
+            text-decoration: none;
+            color: #8b0000;
+            font-weight: bold;
+            border: 2px solid #8b0000;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: #fffaf0;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .school-list a:hover {
+            background-color: #8b0000;
+            color: #fff;
+            border-color: #fff;
+        }
+        .school-info {
+            display: none;
+            margin-bottom: 20px;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .school-info img {
+            width: 20%;
+            margin-right: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .school-info.active {
+            display: flex;
+        }
+        .school-info p {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.8;
+        }
+    </style>
+    <script>
+        function showSchoolInfo(schoolId) {
+            const infos = document.querySelectorAll('.school-info');
+            infos.forEach(info => {
+                if (info.id === schoolId) {
+                    info.classList.add('active');
+                } else {
+                    info.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Education Background</h1>
+    
+    <div class="school-list">
+        <a href="#" onclick="showSchoolInfo('kindergarten'); return false;">Kindergarten</a>
+        <a href="#" onclick="showSchoolInfo('primary-school'); return false;">Primary School</a>
+        <a href="#" onclick="showSchoolInfo('secondary-school'); return false;">Secondary School</a>
+        <a href="#" onclick="showSchoolInfo('pre-university'); return false;">Pre-University</a>
+        <a href="#" onclick="showSchoolInfo('degree'); return false;">Degree</a>
+    </div>
+    
+    <div id="kindergarten" class="school-info">
+        <img src="IMAGES/tadika.png" alt="kindergarten">
+        <p>My educational journey began at a small, colorful kindergarten, a place filled with laughter and the joy of discovery. Here, I took my first steps into the world of learning, surrounded by nurturing teachers who introduced me to the basics of education through playful activities. These early years were crucial in developing my social skills and curiosity about the world around me. Every day was an adventure, filled with new experiences that laid the foundation for my lifelong love of learning.</p>
+    </div>
+    
+    <div id="primary-school" class="school-info">
+        <img src="IMAGES/SKPP.jpg" alt="primary school">
+        <p>As I progressed to Sekolah Kebangsaan Pasir Pekan for primary school, my world expanded both academically and socially. These formative years were marked by the development of foundational skills in reading, writing, and arithmetic. I remember the excitement of learning to read my first book and solving my first math problem. My teachers were instrumental in nurturing my growing curiosity, and I participated in various school activities that built my confidence and teamwork abilities. It was here that I discovered a passion for science and literature, subjects that would continue to intrigue me in the years to come.</p>
+    </div>
+    
+    <div id="secondary-school" class="school-info">
+        <img src="IMAGES/maher.jpg" alt="secondary school">
+        <p>Transitioning to SMK Dato' Ahmad Maher for secondary school, I found myself in a larger, more diverse environment. This was a period of significant growth, both intellectually and personally. The rigorous academic curriculum challenged me to think critically and analytically. I delved deeper into subjects like biology, chemistry, and history, which opened my eyes to the complexities of the world. Extracurricular activities, such as joining the debate club and participating in science fairs, played a crucial role in shaping my interests and skills. These experiences taught me valuable lessons in leadership, perseverance, and the importance of a well-rounded education.</p>
+    </div>
+    
+    <div id="pre-university" class="school-info">
+        <img src="IMAGES/SICimage.png" alt="pre-university">
+        <p>After completing my secondary education, I took the next step by enrolling in a pre-university program at Sultan Ismail College. This period was all about preparing for the rigorous demands of higher education. The curriculum was challenging, designed to hone my analytical and problem-solving skills. I engaged in intensive study sessions, group projects, and presentations, which were crucial in developing my academic discipline and work ethic. It was during this time that I solidified my interest in computer science, drawn by the subject's blend of creativity and logic. This phase was not just about academics; it was also about growing as an individual, learning to balance studies with personal interests and responsibilities.</p>
+    </div>
+    
+    <div id="degree" class="school-info">
+        <img src="IMAGES/IIUM LOGO.jpg" alt="degree" style="width: 25%;">
+        <p>With a clear vision of my career path, I eagerly entered the International Islamic University Malaysia (IIUM) to pursue a degree in Computer Science. The university environment was both stimulating and demanding, pushing me to new heights of academic and personal achievement. The curriculum was comprehensive, covering everything from programming languages to data structures, algorithms, and artificial intelligence. I engaged in numerous projects and internships that provided practical experience and a deeper understanding of the field. My time at IIUM has been transformative, equipping me with the skills and knowledge needed to succeed in the ever-evolving tech industry. The support and guidance of my professors and peers have been invaluable, and I am immensely grateful for the opportunities and experiences that have shaped my journey so far.</p>
+    </div>
+</body>
+</html>
+
+
+
