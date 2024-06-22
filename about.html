@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa; 
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        h1 {
+            text-align: center;
+            color: #444;
+            font-weight: bold;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffe4e1;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #5d5b5b; 
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #530c40;
+        }
+
+        /* Heading styles */
+         h2, h3, h4 {
+            color: #34495e; 
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph and text styles */
+        p {
+            text-align: justify; 
+            margin-bottom: 20px;
+            padding: 0 20px;
+            color: #666; 
+        }
+
+        /* Image styling */
+        img {
+            border: 2px solid #ddd; 
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+
+
+        /* Section heading styles */
+        h3 {
+            font-family: 'Montserrat';
+            background-color: #efb9d1; 
+            color: black;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Family tree styling */
+        .family-tree {
+            max-width: 600px;
+            margin: 0 auto 20px; 
+            padding: 20px; 
+            background-color: #f9f9f9; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            border: 2px solid #ccc; 
+        }
+
+        /* Family tree title styling */
+        .family-tree-title {
+            color: #34495e;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Family branch styling */
+        .family-branch {
+            margin-bottom: 20px;
+        }
+
+        /* Family members list styling */
+        .family-members {
+            padding-left: 20px;
+        }
+
+        .family-members li {
+            margin: 5px 0;
+            list-style-type: none;
+            position: relative; /*correct positioning of icons */
+        }
+
+        .family-members li:before {
+            content: "👤";
+            position: absolute;
+            left: -20px; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="favourite.html">Favourite</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <h2>Biodata</h2>
+    <div style="text-align: center;">
+        <img src="IMAGES/MIA.jpg" alt="My Photo" width="30%">
+    </div>
+    <p>
+        Allow me to extend my warmest wishes to you. I'm Siti Damia Binti Ab Razak, a twenty-year-old student studying Computer Science at IIUM.
+        I live with my parents and have six older siblings. I was born on December 24th. Baking is my passion, especially making chocolates
+        and matcha treats. I'm excited to share more about myself with you. Making my family proud is my top priority, which is why I'm dedicated
+        to achieving my goals. I believe challenges help me grow and I'm eager to learn. I'm looking forward to our interactions and appreciate
+        any advice or support you can offer. Thank you for joining me on this journey!
+    </p>
+
+    <h3>Baking is my therapy</h3>
+    <p>Here are some captured moments of my beautifully baked desserts:</p>
+    <div style="text-align: center;">
+        <img src="IMAGES/B1.jpg" alt="Baked Dessert 1" width="15%">
+        <img src="IMAGES/B2.jpg" alt="Baked Dessert 2" width="15%">
+        <img src="IMAGES/B3.jpg" alt="Baked Dessert 3" width="15%">
+        <img src="IMAGES/B4.jpg" alt="Baked Dessert 4" width="15%">
+        <img src="IMAGES/B5.jpg" alt="Baked Dessert 5" width="15%">
+        <img src="IMAGES/B6.jpg" alt="Baked Dessert 6" width="15%">
+        <img src="IMAGES/B7.jpg" alt="Baked Dessert 7" width="15%">
+        <img src="IMAGES/B8.jpg" alt="Baked Dessert 8" width="15%">
+        <img src="IMAGES/B9.jpg" alt="Baked Dessert 9" width="15%">
+        <img src="IMAGES/B10.jpg" alt="Baked Dessert 10" width="15%">
+    </div>
+
+    <h4 class="family-tree-title">Family Tree</h4>
+    <ul class="family-tree">
+        <li class="family-branch grandparents">Grandparents
+            <ul class="family-members">
+                <li>Paternal: Yin and Minah</li>
+                <li>Maternal: Nik Abdullah and Wan Sariah</li>
+            </ul>
+        </li>
+        <li class="family-branch parents">Parents
+            <ul class="family-members">
+                <li>Father: Ab Razak</li>
+                <li>Mother: Nik Fauziah</li>
+            </ul>
+        </li>
+        <li class="family-branch siblings">Siblings
+            <ul class="family-members">
+                <li>Brother: Farhan</li>
+                <li>Sister: Sarah</li>
+                <li>Sister: Husna</li>
+                <li>Brother: Faiz</li>
+                <li>Brother: Faris</li>
+                <li>Sister: Aisyah</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
